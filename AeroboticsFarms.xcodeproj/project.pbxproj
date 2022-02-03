@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC79B89327ABE0240008F66E /* AeroboticsFarmsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79B89227ABE0240008F66E /* AeroboticsFarmsApp.swift */; };
+		EC79B89527ABE0240008F66E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79B89427ABE0240008F66E /* ContentView.swift */; };
+		EC79B89727ABE0270008F66E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC79B89627ABE0270008F66E /* Assets.xcassets */; };
+		EC79B89A27ABE0270008F66E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC79B89927ABE0270008F66E /* Preview Assets.xcassets */; };
+		EC79B89C27ABE0270008F66E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79B89B27ABE0270008F66E /* Persistence.swift */; };
+		EC79B89F27ABE0270008F66E /* AeroboticsFarms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC79B89D27ABE0270008F66E /* AeroboticsFarms.xcdatamodeld */; };
+		EC79B8A927ABE0280008F66E /* AeroboticsFarmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79B8A827ABE0280008F66E /* AeroboticsFarmsTests.swift */; };
+		EC79B8B327ABE0280008F66E /* AeroboticsFarmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79B8B227ABE0280008F66E /* AeroboticsFarmsUITests.swift */; };
+		EC79B8B527ABE0280008F66E /* AeroboticsFarmsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79B8B427ABE0280008F66E /* AeroboticsFarmsUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC79B8A527ABE0280008F66E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC79B88727ABE0240008F66E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC79B88E27ABE0240008F66E;
+			remoteInfo = AeroboticsFarms;
+		};
+		EC79B8AF27ABE0280008F66E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC79B88727ABE0240008F66E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC79B88E27ABE0240008F66E;
+			remoteInfo = AeroboticsFarms;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC79B88F27ABE0240008F66E /* AeroboticsFarms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeroboticsFarms.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC79B89227ABE0240008F66E /* AeroboticsFarmsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroboticsFarmsApp.swift; sourceTree = "<group>"; };
+		EC79B89427ABE0240008F66E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC79B89627ABE0270008F66E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC79B89927ABE0270008F66E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC79B89B27ABE0270008F66E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		EC79B89E27ABE0270008F66E /* AeroboticsFarms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AeroboticsFarms.xcdatamodel; sourceTree = "<group>"; };
+		EC79B8A427ABE0280008F66E /* AeroboticsFarmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeroboticsFarmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC79B8A827ABE0280008F66E /* AeroboticsFarmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroboticsFarmsTests.swift; sourceTree = "<group>"; };
+		EC79B8AE27ABE0280008F66E /* AeroboticsFarmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeroboticsFarmsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC79B8B227ABE0280008F66E /* AeroboticsFarmsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroboticsFarmsUITests.swift; sourceTree = "<group>"; };
+		EC79B8B427ABE0280008F66E /* AeroboticsFarmsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroboticsFarmsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC79B88C27ABE0240008F66E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC79B8A127ABE0280008F66E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC79B8AB27ABE0280008F66E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC79B88627ABE0240008F66E = {
+			isa = PBXGroup;
+			children = (
+				EC79B89127ABE0240008F66E /* AeroboticsFarms */,
+				EC79B8A727ABE0280008F66E /* AeroboticsFarmsTests */,
+				EC79B8B127ABE0280008F66E /* AeroboticsFarmsUITests */,
+				EC79B89027ABE0240008F66E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC79B89027ABE0240008F66E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC79B88F27ABE0240008F66E /* AeroboticsFarms.app */,
+				EC79B8A427ABE0280008F66E /* AeroboticsFarmsTests.xctest */,
+				EC79B8AE27ABE0280008F66E /* AeroboticsFarmsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC79B89127ABE0240008F66E /* AeroboticsFarms */ = {
+			isa = PBXGroup;
+			children = (
+				EC79B89227ABE0240008F66E /* AeroboticsFarmsApp.swift */,
+				EC79B89427ABE0240008F66E /* ContentView.swift */,
+				EC79B89627ABE0270008F66E /* Assets.xcassets */,
+				EC79B89B27ABE0270008F66E /* Persistence.swift */,
+				EC79B89D27ABE0270008F66E /* AeroboticsFarms.xcdatamodeld */,
+				EC79B89827ABE0270008F66E /* Preview Content */,
+			);
+			path = AeroboticsFarms;
+			sourceTree = "<group>";
+		};
+		EC79B89827ABE0270008F66E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EC79B89927ABE0270008F66E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC79B8A727ABE0280008F66E /* AeroboticsFarmsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC79B8A827ABE0280008F66E /* AeroboticsFarmsTests.swift */,
+			);
+			path = AeroboticsFarmsTests;
+			sourceTree = "<group>";
+		};
+		EC79B8B127ABE0280008F66E /* AeroboticsFarmsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC79B8B227ABE0280008F66E /* AeroboticsFarmsUITests.swift */,
+				EC79B8B427ABE0280008F66E /* AeroboticsFarmsUITestsLaunchTests.swift */,
+			);
+			path = AeroboticsFarmsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC79B88E27ABE0240008F66E /* AeroboticsFarms */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC79B8B827ABE0280008F66E /* Build configuration list for PBXNativeTarget "AeroboticsFarms" */;
+			buildPhases = (
+				EC79B88B27ABE0240008F66E /* Sources */,
+				EC79B88C27ABE0240008F66E /* Frameworks */,
+				EC79B88D27ABE0240008F66E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AeroboticsFarms;
+			productName = AeroboticsFarms;
+			productReference = EC79B88F27ABE0240008F66E /* AeroboticsFarms.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC79B8A327ABE0280008F66E /* AeroboticsFarmsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC79B8BB27ABE0280008F66E /* Build configuration list for PBXNativeTarget "AeroboticsFarmsTests" */;
+			buildPhases = (
+				EC79B8A027ABE0280008F66E /* Sources */,
+				EC79B8A127ABE0280008F66E /* Frameworks */,
+				EC79B8A227ABE0280008F66E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC79B8A627ABE0280008F66E /* PBXTargetDependency */,
+			);
+			name = AeroboticsFarmsTests;
+			productName = AeroboticsFarmsTests;
+			productReference = EC79B8A427ABE0280008F66E /* AeroboticsFarmsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC79B8AD27ABE0280008F66E /* AeroboticsFarmsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC79B8BE27ABE0280008F66E /* Build configuration list for PBXNativeTarget "AeroboticsFarmsUITests" */;
+			buildPhases = (
+				EC79B8AA27ABE0280008F66E /* Sources */,
+				EC79B8AB27ABE0280008F66E /* Frameworks */,
+				EC79B8AC27ABE0280008F66E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC79B8B027ABE0280008F66E /* PBXTargetDependency */,
+			);
+			name = AeroboticsFarmsUITests;
+			productName = AeroboticsFarmsUITests;
+			productReference = EC79B8AE27ABE0280008F66E /* AeroboticsFarmsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC79B88727ABE0240008F66E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					EC79B88E27ABE0240008F66E = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					EC79B8A327ABE0280008F66E = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = EC79B88E27ABE0240008F66E;
+					};
+					EC79B8AD27ABE0280008F66E = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = EC79B88E27ABE0240008F66E;
+					};
+				};
+			};
+			buildConfigurationList = EC79B88A27ABE0240008F66E /* Build configuration list for PBXProject "AeroboticsFarms" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC79B88627ABE0240008F66E;
+			productRefGroup = EC79B89027ABE0240008F66E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC79B88E27ABE0240008F66E /* AeroboticsFarms */,
+				EC79B8A327ABE0280008F66E /* AeroboticsFarmsTests */,
+				EC79B8AD27ABE0280008F66E /* AeroboticsFarmsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC79B88D27ABE0240008F66E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC79B89A27ABE0270008F66E /* Preview Assets.xcassets in Resources */,
+				EC79B89727ABE0270008F66E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC79B8A227ABE0280008F66E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC79B8AC27ABE0280008F66E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC79B88B27ABE0240008F66E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC79B89F27ABE0270008F66E /* AeroboticsFarms.xcdatamodeld in Sources */,
+				EC79B89C27ABE0270008F66E /* Persistence.swift in Sources */,
+				EC79B89527ABE0240008F66E /* ContentView.swift in Sources */,
+				EC79B89327ABE0240008F66E /* AeroboticsFarmsApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC79B8A027ABE0280008F66E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC79B8A927ABE0280008F66E /* AeroboticsFarmsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC79B8AA27ABE0280008F66E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC79B8B327ABE0280008F66E /* AeroboticsFarmsUITests.swift in Sources */,
+				EC79B8B527ABE0280008F66E /* AeroboticsFarmsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC79B8A627ABE0280008F66E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC79B88E27ABE0240008F66E /* AeroboticsFarms */;
+			targetProxy = EC79B8A527ABE0280008F66E /* PBXContainerItemProxy */;
+		};
+		EC79B8B027ABE0280008F66E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC79B88E27ABE0240008F66E /* AeroboticsFarms */;
+			targetProxy = EC79B8AF27ABE0280008F66E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EC79B8B627ABE0280008F66E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC79B8B727ABE0280008F66E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC79B8B927ABE0280008F66E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AeroboticsFarms/Preview Content\"";
+				DEVELOPMENT_TEAM = QYYTQ29F84;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ugomirikwe.AeroboticsFarms;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC79B8BA27ABE0280008F66E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AeroboticsFarms/Preview Content\"";
+				DEVELOPMENT_TEAM = QYYTQ29F84;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ugomirikwe.AeroboticsFarms;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC79B8BC27ABE0280008F66E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QYYTQ29F84;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ugomirikwe.AeroboticsFarmsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AeroboticsFarms.app/AeroboticsFarms";
+			};
+			name = Debug;
+		};
+		EC79B8BD27ABE0280008F66E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QYYTQ29F84;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ugomirikwe.AeroboticsFarmsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AeroboticsFarms.app/AeroboticsFarms";
+			};
+			name = Release;
+		};
+		EC79B8BF27ABE0280008F66E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QYYTQ29F84;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ugomirikwe.AeroboticsFarmsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AeroboticsFarms;
+			};
+			name = Debug;
+		};
+		EC79B8C027ABE0280008F66E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QYYTQ29F84;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ugomirikwe.AeroboticsFarmsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AeroboticsFarms;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC79B88A27ABE0240008F66E /* Build configuration list for PBXProject "AeroboticsFarms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC79B8B627ABE0280008F66E /* Debug */,
+				EC79B8B727ABE0280008F66E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC79B8B827ABE0280008F66E /* Build configuration list for PBXNativeTarget "AeroboticsFarms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC79B8B927ABE0280008F66E /* Debug */,
+				EC79B8BA27ABE0280008F66E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC79B8BB27ABE0280008F66E /* Build configuration list for PBXNativeTarget "AeroboticsFarmsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC79B8BC27ABE0280008F66E /* Debug */,
+				EC79B8BD27ABE0280008F66E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC79B8BE27ABE0280008F66E /* Build configuration list for PBXNativeTarget "AeroboticsFarmsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC79B8BF27ABE0280008F66E /* Debug */,
+				EC79B8C027ABE0280008F66E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EC79B89D27ABE0270008F66E /* AeroboticsFarms.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC79B89E27ABE0270008F66E /* AeroboticsFarms.xcdatamodel */,
+			);
+			currentVersion = EC79B89E27ABE0270008F66E /* AeroboticsFarms.xcdatamodel */;
+			path = AeroboticsFarms.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EC79B88727ABE0240008F66E /* Project object */;
+}
