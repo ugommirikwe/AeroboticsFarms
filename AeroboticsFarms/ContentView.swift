@@ -1,88 +1,77 @@
-//
-//  ContentView.swift
-//  AeroboticsFarms
-//
-//  Created by Ugochukwu Mmirikwe on 2022/02/03.
-//
-
 import SwiftUI
 import CoreData
+import Combine
+import DependencyProviderContainer
+import FarmViews
+import SettingsView
+import NetworkMonitorUtilView
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+    let dependencyContainer: DependencyProviderContainerProtocol
+    
+    @State private var showSettingsSheet: Bool = false
+    @State private var showNetworkStateView = false
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
-                }
-                .onDelete(perform: deleteItems)
+            ZStack(alignment: .top) {
+                farmsListView
+                NetworkMonitorStateView(showView: $showNetworkStateView)
+                    .transition(NetworkMonitorStateView.slideInOut)
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+            .animation(.spring(), value: showNetworkStateView)
+        }
+        .sheet(isPresented: $showSettingsSheet) {
+            SettingsView(viewModel: dependencyContainer.settingsViewModel)
+        }
+        .navigationViewStyle(.stack)
+        .navigationBarTitleTextColor(.accentColor)
+        .onAppear {
+            guard hasFetchedSettings() else {
+                showSettingsSheet = true
+                return
             }
-            Text("Select an item")
+        }
+        .onReceive(dependencyContainer.networkMonitorUtil.$hasConnectionStatusChanged) { newValue in
+            showNetworkStateView = newValue
         }
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+    
+    @ViewBuilder var farmsListView: some View {
+        if !showSettingsSheet, hasFetchedSettings() {
+            FarmsListView(
+                farmsViewModel: dependencyContainer.farmViewModel,
+                hasFetchedSettings: true
+            )
+                .navigationTitle("Farms")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            showSettingsSheet = true
+                        }) {
+                            HStack {
+                                Text("Settings")
+                                Image(systemName: "gearshape.fill")
+                            }
+                        }
+                    }
+                }
         }
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+    
+    private func hasFetchedSettings() -> Bool {
+        if let settings = dependencyContainer.settingsDataRepository.fetchSettings(),
+           !settings.apiBaseURL.isEmpty,
+           !settings.apiToken.isEmpty {
+            return true
         }
+        
+        return false
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView(dependencyContainer: DependencyProviderContainer.shared)
     }
 }

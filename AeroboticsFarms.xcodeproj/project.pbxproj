@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC4E56D927B00FB10022F2E2 /* DomainModel in Frameworks */ = {isa = PBXBuildFile; productRef = EC4E56D827B00FB10022F2E2 /* DomainModel */; };
+		EC5795A027BA83270008B3E0 /* NetworkMonitorUtil in Frameworks */ = {isa = PBXBuildFile; productRef = EC57959F27BA83270008B3E0 /* NetworkMonitorUtil */; };
 		EC79B89327ABE0240008F66E /* AeroboticsFarmsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79B89227ABE0240008F66E /* AeroboticsFarmsApp.swift */; };
 		EC79B89527ABE0240008F66E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79B89427ABE0240008F66E /* ContentView.swift */; };
 		EC79B89727ABE0270008F66E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC79B89627ABE0270008F66E /* Assets.xcassets */; };
 		EC79B89A27ABE0270008F66E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC79B89927ABE0270008F66E /* Preview Assets.xcassets */; };
-		EC79B89C27ABE0270008F66E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79B89B27ABE0270008F66E /* Persistence.swift */; };
-		EC79B89F27ABE0270008F66E /* AeroboticsFarms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC79B89D27ABE0270008F66E /* AeroboticsFarms.xcdatamodeld */; };
 		EC79B8A927ABE0280008F66E /* AeroboticsFarmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79B8A827ABE0280008F66E /* AeroboticsFarmsTests.swift */; };
 		EC79B8B327ABE0280008F66E /* AeroboticsFarmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79B8B227ABE0280008F66E /* AeroboticsFarmsUITests.swift */; };
 		EC79B8B527ABE0280008F66E /* AeroboticsFarmsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79B8B427ABE0280008F66E /* AeroboticsFarmsUITestsLaunchTests.swift */; };
+		EC8F890627B9244800D974FF /* SettingsView in Frameworks */ = {isa = PBXBuildFile; productRef = EC8F890527B9244800D974FF /* SettingsView */; };
+		EC9DF28027B00DC300AEECA2 /* DependencyProviderContainer in Frameworks */ = {isa = PBXBuildFile; productRef = EC9DF27F27B00DC300AEECA2 /* DependencyProviderContainer */; };
+		ECA53BA827B55F02000D1692 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA53BA727B55F02000D1692 /* View+Extension.swift */; };
+		ECF685F827B1D72C005783C7 /* DataRepository in Frameworks */ = {isa = PBXBuildFile; productRef = ECF685F727B1D72C005783C7 /* DataRepository */; };
+		ECF685FA27B1D739005783C7 /* ApplicationError in Frameworks */ = {isa = PBXBuildFile; productRef = ECF685F927B1D739005783C7 /* ApplicationError */; };
+		ECF685FD27B1E4B0005783C7 /* FarmViews in Frameworks */ = {isa = PBXBuildFile; productRef = ECF685FC27B1E4B0005783C7 /* FarmViews */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,18 +42,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC161E0427AD611B00F7BFF4 /* RemoteEndPoints */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RemoteEndPoints; sourceTree = "<group>"; };
+		EC161E0527AD624C00F7BFF4 /* ApplicationError */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ApplicationError; sourceTree = "<group>"; };
+		EC161E0627AD63E400F7BFF4 /* FarmDataSourceRemote */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FarmDataSourceRemote; sourceTree = "<group>"; };
+		EC161E0A27AD7B0B00F7BFF4 /* FarmDataSourceLocal */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FarmDataSourceLocal; sourceTree = "<group>"; };
+		EC161E0B27AE6FCD00F7BFF4 /* DomainModel */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DomainModel; sourceTree = "<group>"; };
+		EC3D886027B7909900831331 /* SettingsView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SettingsView; sourceTree = "<group>"; };
+		EC4E56DA27B136BB0022F2E2 /* DataRepository */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DataRepository; sourceTree = "<group>"; };
+		EC57959C27BA615C0008B3E0 /* NetworkMonitorUtil */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkMonitorUtil; sourceTree = "<group>"; };
 		EC79B88F27ABE0240008F66E /* AeroboticsFarms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeroboticsFarms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC79B89227ABE0240008F66E /* AeroboticsFarmsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroboticsFarmsApp.swift; sourceTree = "<group>"; };
 		EC79B89427ABE0240008F66E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC79B89627ABE0270008F66E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC79B89927ABE0270008F66E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EC79B89B27ABE0270008F66E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		EC79B89E27ABE0270008F66E /* AeroboticsFarms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AeroboticsFarms.xcdatamodel; sourceTree = "<group>"; };
 		EC79B8A427ABE0280008F66E /* AeroboticsFarmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeroboticsFarmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC79B8A827ABE0280008F66E /* AeroboticsFarmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroboticsFarmsTests.swift; sourceTree = "<group>"; };
 		EC79B8AE27ABE0280008F66E /* AeroboticsFarmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeroboticsFarmsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC79B8B227ABE0280008F66E /* AeroboticsFarmsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroboticsFarmsUITests.swift; sourceTree = "<group>"; };
 		EC79B8B427ABE0280008F66E /* AeroboticsFarmsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroboticsFarmsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EC79B8C127ABEA0C0008F66E /* RemoteAPIManager */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RemoteAPIManager; sourceTree = "<group>"; };
+		EC79B8C227AD567F0008F66E /* DependencyProviderContainer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DependencyProviderContainer; sourceTree = "<group>"; };
+		EC8F890327B8FC6900D974FF /* KeychainUtil */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = KeychainUtil; sourceTree = "<group>"; };
+		EC8F890427B910CF00D974FF /* SettingsDataRepository */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SettingsDataRepository; sourceTree = "<group>"; };
+		ECA53BA727B55F02000D1692 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		ECF685FB27B1E2BB005783C7 /* FarmViews */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FarmViews; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +73,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5795A027BA83270008B3E0 /* NetworkMonitorUtil in Frameworks */,
+				EC8F890627B9244800D974FF /* SettingsView in Frameworks */,
+				ECF685FD27B1E4B0005783C7 /* FarmViews in Frameworks */,
+				ECF685F827B1D72C005783C7 /* DataRepository in Frameworks */,
+				EC4E56D927B00FB10022F2E2 /* DomainModel in Frameworks */,
+				ECF685FA27B1D739005783C7 /* ApplicationError in Frameworks */,
+				EC9DF28027B00DC300AEECA2 /* DependencyProviderContainer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,13 +100,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC161E0727AD74FB00F7BFF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EC79B88627ABE0240008F66E = {
 			isa = PBXGroup;
 			children = (
 				EC79B89127ABE0240008F66E /* AeroboticsFarms */,
 				EC79B8A727ABE0280008F66E /* AeroboticsFarmsTests */,
 				EC79B8B127ABE0280008F66E /* AeroboticsFarmsUITests */,
+				EC57959C27BA615C0008B3E0 /* NetworkMonitorUtil */,
+				EC3D886027B7909900831331 /* SettingsView */,
+				EC8F890427B910CF00D974FF /* SettingsDataRepository */,
+				EC8F890327B8FC6900D974FF /* KeychainUtil */,
+				ECF685FB27B1E2BB005783C7 /* FarmViews */,
+				EC161E0B27AE6FCD00F7BFF4 /* DomainModel */,
+				EC79B8C227AD567F0008F66E /* DependencyProviderContainer */,
+				EC4E56DA27B136BB0022F2E2 /* DataRepository */,
+				EC161E0A27AD7B0B00F7BFF4 /* FarmDataSourceLocal */,
+				EC161E0627AD63E400F7BFF4 /* FarmDataSourceRemote */,
+				EC161E0527AD624C00F7BFF4 /* ApplicationError */,
+				EC161E0427AD611B00F7BFF4 /* RemoteEndPoints */,
+				EC79B8C127ABEA0C0008F66E /* RemoteAPIManager */,
 				EC79B89027ABE0240008F66E /* Products */,
+				EC161E0727AD74FB00F7BFF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +146,8 @@
 			children = (
 				EC79B89227ABE0240008F66E /* AeroboticsFarmsApp.swift */,
 				EC79B89427ABE0240008F66E /* ContentView.swift */,
+				ECA53BA727B55F02000D1692 /* View+Extension.swift */,
 				EC79B89627ABE0270008F66E /* Assets.xcassets */,
-				EC79B89B27ABE0270008F66E /* Persistence.swift */,
-				EC79B89D27ABE0270008F66E /* AeroboticsFarms.xcdatamodeld */,
 				EC79B89827ABE0270008F66E /* Preview Content */,
 			);
 			path = AeroboticsFarms;
@@ -149,6 +194,15 @@
 			dependencies = (
 			);
 			name = AeroboticsFarms;
+			packageProductDependencies = (
+				EC9DF27F27B00DC300AEECA2 /* DependencyProviderContainer */,
+				EC4E56D827B00FB10022F2E2 /* DomainModel */,
+				ECF685F727B1D72C005783C7 /* DataRepository */,
+				ECF685F927B1D739005783C7 /* ApplicationError */,
+				ECF685FC27B1E4B0005783C7 /* FarmViews */,
+				EC8F890527B9244800D974FF /* SettingsView */,
+				EC57959F27BA83270008B3E0 /* NetworkMonitorUtil */,
+			);
 			productName = AeroboticsFarms;
 			productReference = EC79B88F27ABE0240008F66E /* AeroboticsFarms.app */;
 			productType = "com.apple.product-type.application";
@@ -263,9 +317,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC79B89F27ABE0270008F66E /* AeroboticsFarms.xcdatamodeld in Sources */,
-				EC79B89C27ABE0270008F66E /* Persistence.swift in Sources */,
 				EC79B89527ABE0240008F66E /* ContentView.swift in Sources */,
+				ECA53BA827B55F02000D1692 /* View+Extension.swift in Sources */,
 				EC79B89327ABE0240008F66E /* AeroboticsFarmsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +486,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -441,10 +495,11 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.ugomirikwe.AeroboticsFarms;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -462,6 +517,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,10 +526,11 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.ugomirikwe.AeroboticsFarms;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -594,18 +651,36 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		EC79B89D27ABE0270008F66E /* AeroboticsFarms.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EC79B89E27ABE0270008F66E /* AeroboticsFarms.xcdatamodel */,
-			);
-			currentVersion = EC79B89E27ABE0270008F66E /* AeroboticsFarms.xcdatamodel */;
-			path = AeroboticsFarms.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCSwiftPackageProductDependency section */
+		EC4E56D827B00FB10022F2E2 /* DomainModel */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DomainModel;
 		};
-/* End XCVersionGroup section */
+		EC57959F27BA83270008B3E0 /* NetworkMonitorUtil */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkMonitorUtil;
+		};
+		EC8F890527B9244800D974FF /* SettingsView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SettingsView;
+		};
+		EC9DF27F27B00DC300AEECA2 /* DependencyProviderContainer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DependencyProviderContainer;
+		};
+		ECF685F727B1D72C005783C7 /* DataRepository */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DataRepository;
+		};
+		ECF685F927B1D739005783C7 /* ApplicationError */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ApplicationError;
+		};
+		ECF685FC27B1E4B0005783C7 /* FarmViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FarmViews;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC79B88727ABE0240008F66E /* Project object */;
 }
