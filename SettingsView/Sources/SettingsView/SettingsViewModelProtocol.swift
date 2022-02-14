@@ -8,9 +8,11 @@ public protocol SettingsViewModelProtocol {
     var baseURLFieldValue: String { get }
     var apiTokenFieldValue: String { get }
     var isSettingsValid: Bool { get }
+    var canCancel: Bool { get }
     func clearBaseURLFieldValue()
     func clearApiTokenFieldValue()
     func onSubmitSettings() -> Bool
+    func cancelChanges()
 }
 
 public final class SettingsViewModel: ObservableObject, SettingsViewModelProtocol {
@@ -19,6 +21,10 @@ public final class SettingsViewModel: ObservableObject, SettingsViewModelProtoco
     @Published public var baseURLFieldValue: String = ""
     @Published public var apiTokenFieldValue: String = ""
     @Published public var isSettingsValid = false
+    
+    public var canCancel: Bool {
+        settingsDataRepository.fetchSettings() != nil
+    }
     
     private let settingsDataRepository: SettingsDataRepository
     
@@ -29,12 +35,7 @@ public final class SettingsViewModel: ObservableObject, SettingsViewModelProtoco
         isProcessing = true
         startObserving()
         
-        if let settings = self.settingsDataRepository.fetchSettings() {
-            baseURLFieldValue = settings.apiBaseURL
-            apiTokenFieldValue = settings.apiToken
-        } else {
-            baseURLFieldValue = Self.defaultBaseURL
-        }
+        initSettings()
         
         isProcessing = false
     }
@@ -62,6 +63,19 @@ public final class SettingsViewModel: ObservableObject, SettingsViewModelProtoco
         
         self.errorMessage = error.localizedDescription
         return false
+    }
+    
+    public func cancelChanges() {
+        initSettings()
+    }
+    
+    private func initSettings() {
+        if let settings = self.settingsDataRepository.fetchSettings() {
+            baseURLFieldValue = settings.apiBaseURL
+            apiTokenFieldValue = settings.apiToken
+        } else {
+            baseURLFieldValue = Self.defaultBaseURL
+        }
     }
     
     private func startObserving() {
@@ -116,6 +130,10 @@ final class SettingsViewModelMock: ObservableObject, SettingsViewModelProtocol {
     @Published var apiTokenFieldValue: String = ""
     @Published var isSettingsValid: Bool = false
     
+    var canCancel: Bool {
+        return false
+    }
+    
     func clearBaseURLFieldValue() {
         baseURLFieldValue = ""
     }
@@ -126,5 +144,9 @@ final class SettingsViewModelMock: ObservableObject, SettingsViewModelProtocol {
     
     func onSubmitSettings() -> Bool {
         false
+    }
+    
+    func cancelChanges() {
+        
     }
 }

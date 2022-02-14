@@ -17,7 +17,7 @@ public struct SettingsView: View {
         NavigationView {
             Form {
                 Section(
-                    header: Text("Enter Remote API credentials"),
+                    header: Text("Enter Remote API Connection Details"),
                     footer: footer
                 ) {
                     baseURLFormField
@@ -30,6 +30,13 @@ public struct SettingsView: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
                         focusedField = .baseURLField
                     }
+                    return
+                }
+                
+                if viewModel.apiTokenFieldValue.isEmpty {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                        focusedField = .apiTokenField
+                    }
                 }
             }
             .onSubmit {
@@ -41,6 +48,15 @@ public struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    if viewModel.canCancel {
+                        Button("Cancel") {
+                            viewModel.cancelChanges()
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                    }
+                }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     if viewModel.isProcessing {
                         ProgressView()
@@ -66,29 +82,52 @@ public struct SettingsView: View {
     }
     
     private var baseURLFormField: some View {
-        HStack {
-            TextField("API Base URL", text: $viewModel.baseURLFieldValue)
-                .focused($focusedField, equals: .baseURLField)
-                .font(.caption)
-                .autocapitalization(.none)
-                .keyboardType(.URL)
-                .submitLabel(.next)
+        VStack {
+            HStack {
+                TextField("API Base URL", text: $viewModel.baseURLFieldValue)
+                    .focused($focusedField, equals: .baseURLField)
+                    .font(.body)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+                    .keyboardType(.URL)
+                    .submitLabel(.next)
+                Spacer()
+                clearButton(for: .baseURLField)
+            }
+            .padding(.vertical, 8)
             
-            clearButton(for: .baseURLField)
+            if !viewModel.baseURLFieldValue.isEmpty {
+                Text("API Base URL")
+                    .font(.system(.caption).smallCaps())
+                    .foregroundColor(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
         }
+        .animation(.linear, value: viewModel.baseURLFieldValue)
     }
     
     private var apiTokenFormField: some View {
-        HStack {
-            TextField("API Token", text: $viewModel.apiTokenFieldValue)
-                .focused($focusedField, equals: .apiTokenField)
-                .font(.caption)
-                .autocapitalization(.none)
-                .disableAutocorrection(true)
-                .submitLabel(.done)
+        VStack {
+            HStack {
+                TextField("API Token", text: $viewModel.apiTokenFieldValue)
+                    .focused($focusedField, equals: .apiTokenField)
+                    .font(.body)
+                    .autocapitalization(.none)
+                    .submitLabel(.done)
+                
+                Spacer()
+                clearButton(for: .apiTokenField)
+            }
+            .padding(.vertical, 8)
             
-            clearButton(for: .apiTokenField)
+            if !viewModel.apiTokenFieldValue.isEmpty {
+                Text("API Access Token")
+                    .font(.system(.caption).smallCaps())
+                    .foregroundColor(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
         }
+        .animation(.linear, value: viewModel.apiTokenFieldValue)
     }
     
     @ViewBuilder private func clearButton(for field: FocusField) -> some View {
